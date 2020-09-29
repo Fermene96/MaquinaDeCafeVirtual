@@ -16,5 +16,10 @@ namespace MaquinaDeCafeVirtual
         {
             InitializeComponent();
         }
+
+        private void Sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

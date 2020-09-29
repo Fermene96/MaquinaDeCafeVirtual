@@ -89,5 +89,17 @@
   <ItemGroup>
     <None Include="Resources\muro.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-09-29 at 16.11.39.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaqDeCafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaqDeCafe1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

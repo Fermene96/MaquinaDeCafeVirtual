@@ -63,9 +63,39 @@ namespace MaquinaDeCafeVirtual.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BGbutton {
+            get {
+                object obj = ResourceManager.GetObject("BGbutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap madeira {
             get {
                 object obj = ResourceManager.GetObject("madeira", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaqDeCafe {
+            get {
+                object obj = ResourceManager.GetObject("MaqDeCafe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaqDeCafe1 {
+            get {
+                object obj = ResourceManager.GetObject("MaqDeCafe1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +116,16 @@ namespace MaquinaDeCafeVirtual.Properties {
         internal static System.Drawing.Bitmap muro {
             get {
                 object obj = ResourceManager.GetObject("muro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_09_29_at_16_11_39 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-09-29 at 16.11.39", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
