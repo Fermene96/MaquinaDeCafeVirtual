@@ -47,10 +47,13 @@
             this.vinteCincoCentBtn = new System.Windows.Forms.Button();
             this.cinquentaCentBtn = new System.Windows.Forms.Button();
             this.umRealBtn = new System.Windows.Forms.Button();
+            this.Finalizado = new System.Windows.Forms.TextBox();
+            this.FinalizadoImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imagem)).BeginInit();
             this.painelEsquerdo.SuspendLayout();
             this.Opcoes.SuspendLayout();
             this.tabelaMoedas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FinalizadoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // imagem
@@ -242,6 +245,7 @@
             this.cincoCentBtn.TabIndex = 1;
             this.cincoCentBtn.Text = "0,05";
             this.cincoCentBtn.UseVisualStyleBackColor = false;
+            this.cincoCentBtn.Click += new System.EventHandler(this.cincoCentBtn_Click);
             // 
             // dezCentBtn
             // 
@@ -253,6 +257,7 @@
             this.dezCentBtn.TabIndex = 2;
             this.dezCentBtn.Text = "0,10";
             this.dezCentBtn.UseVisualStyleBackColor = false;
+            this.dezCentBtn.Click += new System.EventHandler(this.dezCentBtn_Click);
             // 
             // vinteCincoCentBtn
             // 
@@ -264,6 +269,7 @@
             this.vinteCincoCentBtn.TabIndex = 3;
             this.vinteCincoCentBtn.Text = "0,25";
             this.vinteCincoCentBtn.UseVisualStyleBackColor = false;
+            this.vinteCincoCentBtn.Click += new System.EventHandler(this.vinteCincoCentBtn_Click);
             // 
             // cinquentaCentBtn
             // 
@@ -275,6 +281,7 @@
             this.cinquentaCentBtn.TabIndex = 4;
             this.cinquentaCentBtn.Text = "0,50";
             this.cinquentaCentBtn.UseVisualStyleBackColor = false;
+            this.cinquentaCentBtn.Click += new System.EventHandler(this.cinquentaCentBtn_Click);
             // 
             // umRealBtn
             // 
@@ -286,6 +293,27 @@
             this.umRealBtn.TabIndex = 5;
             this.umRealBtn.Text = "1,00";
             this.umRealBtn.UseVisualStyleBackColor = false;
+            this.umRealBtn.Click += new System.EventHandler(this.umRealBtn_Click);
+            // 
+            // Finalizado
+            // 
+            this.Finalizado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Finalizado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Finalizado.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Finalizado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Finalizado.Location = new System.Drawing.Point(258, 522);
+            this.Finalizado.Multiline = true;
+            this.Finalizado.Name = "Finalizado";
+            this.Finalizado.Size = new System.Drawing.Size(496, 107);
+            this.Finalizado.TabIndex = 5;
+            // 
+            // FinalizadoImg
+            // 
+            this.FinalizadoImg.Location = new System.Drawing.Point(772, 401);
+            this.FinalizadoImg.Name = "FinalizadoImg";
+            this.FinalizadoImg.Size = new System.Drawing.Size(216, 228);
+            this.FinalizadoImg.TabIndex = 6;
+            this.FinalizadoImg.TabStop = false;
             // 
             // Form1
             // 
@@ -293,6 +321,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1003, 641);
+            this.Controls.Add(this.FinalizadoImg);
+            this.Controls.Add(this.Finalizado);
             this.Controls.Add(this.tabelaMoedas);
             this.Controls.Add(this.PainelDigital);
             this.Controls.Add(this.Opcoes);
@@ -306,6 +336,7 @@
             this.Opcoes.ResumeLayout(false);
             this.Opcoes.PerformLayout();
             this.tabelaMoedas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FinalizadoImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,6 +362,8 @@
         private System.Windows.Forms.Button vinteCincoCentBtn;
         private System.Windows.Forms.Button cinquentaCentBtn;
         private System.Windows.Forms.Button umRealBtn;
+        private System.Windows.Forms.TextBox Finalizado;
+        private System.Windows.Forms.PictureBox FinalizadoImg;
     }
 }
 

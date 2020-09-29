@@ -14,6 +14,8 @@ namespace MaquinaDeCafeVirtual
     {
 
         float Valor = 0.0F;
+        float Retorno = 0.0F;
+        float Troco = 0.0F;
         float ValorDoCafe = 0.0F;
 
         public Form1()
@@ -66,20 +68,52 @@ namespace MaquinaDeCafeVirtual
 
         private void umCentBtn_Click(object sender, EventArgs e)
         {
-            Valor = Valor + 0.01F;
+            Retorno = Retorno + 0.01F;
         }
 
         private void PrepararBtn_Click(object sender, EventArgs e)
         {
             if(Valor < ValorDoCafe)
             {
-                float Total = ValorDoCafe - Valor;
+                float Total = Restando(ValorDoCafe, Valor);
                 PainelDigital.Text = "Está faltando R$" + Total.ToString();
             }
             else if(Valor >= ValorDoCafe)
             {
+                Troco = Valor - ValorDoCafe;
                 PainelDigital.Text = "Esta saindo...";
             }
+        }
+
+        private float Restando(float ValorCafe, float valor)
+        {
+            return ValorCafe - valor;
+        }
+
+
+        private void cincoCentBtn_Click(object sender, EventArgs e)
+        {
+            Retorno = Retorno + 0.05F;
+        }
+
+        private void dezCentBtn_Click(object sender, EventArgs e)
+        {
+            Valor = Valor + 0.10F;
+        }
+
+        private void vinteCincoCentBtn_Click(object sender, EventArgs e)
+        {
+            Valor = Valor + 0.25F;
+        }
+
+        private void cinquentaCentBtn_Click(object sender, EventArgs e)
+        {
+            Valor = Valor + 0.50F;
+        }
+
+        private void umRealBtn_Click(object sender, EventArgs e)
+        {
+            Valor = Valor + 1.0F;
         }
     }
 }
