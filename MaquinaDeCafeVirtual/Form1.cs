@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaquinaDeCafeVirtual.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,13 +77,29 @@ namespace MaquinaDeCafeVirtual
             if(Valor < ValorDoCafe)
             {
                 float Total = Restando(ValorDoCafe, Valor);
-                PainelDigital.Text = "Está faltando R$" + Total.ToString();
+                PainelDigital.Text = "Está faltando R$" + Total.ToString("F2");
             }
             else if(Valor >= ValorDoCafe)
             {
-                Troco = Valor - ValorDoCafe;
                 PainelDigital.Text = "Esta saindo...";
+
+                var t = Task.Delay(2000);
+                t.Wait();
+
+                PedidoFinalizado();
+
+                PainelDigital.Text = "Olá, escolha uma bebida!";
+                ResetValues();
             }
+        }
+
+        private void PedidoFinalizado()
+        {
+            Troco = Valor - ValorDoCafe;
+            var R = Retorno;
+            Form2 form2 = new Form2();
+            form2.TrocoDoCafe(Troco, R);
+            form2.Show();
         }
 
         private float Restando(float ValorCafe, float valor)
@@ -115,5 +132,13 @@ namespace MaquinaDeCafeVirtual
         {
             Valor = Valor + 1.0F;
         }
+
+        private void ResetValues()
+        {
+            Valor = 0.0F;
+            Retorno = 0.0F;
+        }
+
+        
     }
 }
