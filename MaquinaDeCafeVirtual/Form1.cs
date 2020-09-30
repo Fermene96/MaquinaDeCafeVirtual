@@ -89,7 +89,7 @@ namespace MaquinaDeCafeVirtual
                 t.Wait();
 
                 PedidoFinalizado();
-
+                ResetRadioButtons();
                 PainelDigital.Text = "Olá, escolha uma bebida à direita!";
                 ResetValues();
             }
@@ -152,6 +152,15 @@ namespace MaquinaDeCafeVirtual
             PrepararBtn.Enabled = false;
             CancelarBtn.Enabled = false;
             PainelDigital.Text = "Olá, escolha uma bebida à direita!";
+            ResetRadioButtons();
+        }
+
+        private void ResetRadioButtons()
+        {
+            CafeOpt.Checked = false;
+            MochaOpt.Checked = false;
+            CafeComLeiteOpt.Checked = false;
+            CappuccinoOpt.Checked = false;
         }
     }
 }
