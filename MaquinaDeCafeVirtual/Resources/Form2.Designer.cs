@@ -40,10 +40,12 @@
             this.TrocoTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.TrocoTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TrocoTxt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TrocoTxt.ForeColor = System.Drawing.Color.Teal;
             this.TrocoTxt.Location = new System.Drawing.Point(23, 405);
             this.TrocoTxt.Multiline = true;
             this.TrocoTxt.Name = "TrocoTxt";
-            this.TrocoTxt.Size = new System.Drawing.Size(339, 63);
+            this.TrocoTxt.ReadOnly = true;
+            this.TrocoTxt.Size = new System.Drawing.Size(347, 83);
             this.TrocoTxt.TabIndex = 0;
             // 
             // CafeImg
@@ -72,8 +74,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(385, 477);
+            this.BackgroundImage = global::MaquinaDeCafeVirtual.Properties.Resources.madeira;
+            this.ClientSize = new System.Drawing.Size(391, 500);
             this.Controls.Add(this.PedidoTxt);
             this.Controls.Add(this.CafeImg);
             this.Controls.Add(this.TrocoTxt);

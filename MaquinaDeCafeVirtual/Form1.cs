@@ -18,6 +18,7 @@ namespace MaquinaDeCafeVirtual
         float Retorno = 0.0F;
         float Troco = 0.0F;
         float ValorDoCafe = 0.0F;
+        float Total = 0.0F;
 
         public Form1()
         {
@@ -76,7 +77,8 @@ namespace MaquinaDeCafeVirtual
         {
             if(Valor < ValorDoCafe)
             {
-                float Total = Restando(ValorDoCafe, Valor);
+                Arredondamento();
+                Total = Restando(ValorDoCafe, Valor);
                 PainelDigital.Text = "Está faltando R$" + Total.ToString("F2");
             }
             else if(Valor >= ValorDoCafe)
@@ -88,7 +90,7 @@ namespace MaquinaDeCafeVirtual
 
                 PedidoFinalizado();
 
-                PainelDigital.Text = "Olá, escolha uma bebida!";
+                PainelDigital.Text = "Olá, escolha uma bebida à direita!";
                 ResetValues();
             }
         }
@@ -105,6 +107,11 @@ namespace MaquinaDeCafeVirtual
         private float Restando(float ValorCafe, float valor)
         {
             return ValorCafe - valor;
+        }
+
+        private void Arredondamento()
+        {
+            Math.Floor(Total);
         }
 
 
@@ -139,6 +146,12 @@ namespace MaquinaDeCafeVirtual
             Retorno = 0.0F;
         }
 
-        
+        private void CancelarBtn_Click(object sender, EventArgs e)
+        {
+            ResetValues();
+            PrepararBtn.Enabled = false;
+            CancelarBtn.Enabled = false;
+            PainelDigital.Text = "Olá, escolha uma bebida à direita!";
+        }
     }
 }

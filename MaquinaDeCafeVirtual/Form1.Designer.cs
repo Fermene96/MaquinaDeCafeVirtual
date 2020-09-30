@@ -56,7 +56,7 @@
             // imagem
             // 
             this.imagem.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.imagem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagem.BackgroundImage")));
+            this.imagem.BackgroundImage = global::MaquinaDeCafeVirtual.Properties.Resources.madeira;
             this.imagem.Image = ((System.Drawing.Image)(resources.GetObject("imagem.Image")));
             this.imagem.Location = new System.Drawing.Point(258, 12);
             this.imagem.Name = "imagem";
@@ -88,6 +88,7 @@
             this.CancelarBtn.TabIndex = 2;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = false;
+            this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
             // PrepararBtn
             // 
@@ -107,7 +108,7 @@
             // Sair
             // 
             this.Sair.BackColor = System.Drawing.Color.Gainsboro;
-            this.Sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sair.BackgroundImage")));
+            this.Sair.BackgroundImage = global::MaquinaDeCafeVirtual.Properties.Resources.BGbutton;
             this.Sair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Sair.FlatAppearance.BorderSize = 0;
             this.Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -194,9 +195,10 @@
             this.PainelDigital.Location = new System.Drawing.Point(466, 80);
             this.PainelDigital.Multiline = true;
             this.PainelDigital.Name = "PainelDigital";
+            this.PainelDigital.ReadOnly = true;
             this.PainelDigital.Size = new System.Drawing.Size(152, 38);
             this.PainelDigital.TabIndex = 3;
-            this.PainelDigital.Text = "Olá, escolha uma bebida!";
+            this.PainelDigital.Text = "Olá, escolha uma bebida à direita!";
             // 
             // tabelaMoedas
             // 
@@ -296,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::MaquinaDeCafeVirtual.Properties.Resources.madeira;
             this.ClientSize = new System.Drawing.Size(1003, 641);
             this.Controls.Add(this.tabelaMoedas);
             this.Controls.Add(this.PainelDigital);
